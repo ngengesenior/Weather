@@ -17,6 +17,15 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent">
 
         <include layout="@layout/current_weather_layout"/>
+
+        <include layout="@layout/text_view_header" />
+
+        <com.airbnb.epoxy.EpoxyRecyclerView
+                android:id="@+id/hourlyRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:itemSpacing="2dp"
+                tools:listitem="@layout/item_weather_hour" />
     </LinearLayout>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
